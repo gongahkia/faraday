@@ -1,0 +1,17 @@
+{
+  "default_model": "TheBloke/Mistral-7B-Instruct-v0.2-GGUF/mistral-7b-instruct-v0.2.Q4_K_M.gguf",
+  "supported_models": {
+    "mistral-7b": {
+      "name": "Mistral-7B-Instruct-v0.2",
+      "quantization": "Q4_K_M",
+      "context_window": 4096,
+      "max_ram": "6GB"
+    },
+    "phi-2": {
+      "name": "phi-2",
+      "quantization": "Q4_K_M",
+      "context_window": 2048,
+      "max_ram": "3GB"
+    }
+  }
+}
