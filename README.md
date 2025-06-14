@@ -2,7 +2,9 @@
 
 # `Faraday` ⚡️
 
-...
+Full Stack AI Chatbot for your [Onyx Boox](https://www.boox.com/) devices.
+
+`Faraday` provides both a Frontend on your [Onyx E-Ink Device](#frontend) and a [Local AI](#model) [Backend](#backend), optimized for [battery life and document processing](#other-notes).
 
 ## Stack
 
