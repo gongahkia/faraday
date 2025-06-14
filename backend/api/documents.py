@@ -1,4 +1,4 @@
-from fastapi import APIRouter, UploadFile, HTTPException, status
+from fastapi import APIRouter, FastAPI, UploadFile, HTTPException, status
 from pathlib import Path
 import shutil
 import hashlib
@@ -11,6 +11,12 @@ pdf_processor = FaradayPDFProcessor()
 
 MAX_FILE_SIZE = 50 * 1024 * 1024  
 ALLOWED_TYPES = {"application/pdf"}
+
+app = FastAPI()
+
+@app.post("/documents/upload")
+async def upload_document():
+    return {"status": "success"}
 
 @router.post("/documents/upload", status_code=status.HTTP_201_CREATED)
 async def upload_document(file: UploadFile):
