@@ -9,7 +9,7 @@ RUN apt-get update && apt-get install -y \
 COPY backend/requirements.txt .
 RUN pip install --no-cache-dir -r requirements.txt
 
-COPY backend/document_processing/ ./backend/document_processing/
+COPY backend/ ./backend/
 COPY models/embedding/ ./models/embedding/
 
 EXPOSE 8001
