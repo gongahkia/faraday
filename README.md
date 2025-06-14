@@ -19,7 +19,7 @@
 
 The below instructions are for locally hosting `Faraday`.
 
-1. Execute the following.
+1. Execute the following to run the [Frontend](./frontend/) and [Backend](./backend/) installation.
 
 ```console
 $ git clone https://github.com/gongahkia/faraday && cd faraday
