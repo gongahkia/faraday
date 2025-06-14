@@ -1,0 +1,6 @@
+{
+  "last_updated": "2025-06-14",
+  "active_model": "mistral-7b-instruct-v0.2.Q4_K_M.gguf",
+  "model_sha": "b5f98a1...",
+  "docker_sync": "rsync -avz ./models/language/ faraday:/app/models/language/"
+}
