@@ -268,13 +268,13 @@ The name `Faraday` is in reference to [Faraday](https://cyberpunk.fandom.com/wik
 
 ## Other notes
 
-I learnt quite a bit about developing for hardware with less mature *(or unoptimised)* SDKs from working on `Faraday`. Below are some of my key takeaways.
+I learnt quite a bit about developing for Hardware with less mature *(or unoptimised)* SDKs while working on `Faraday`. Below are some of my key takeaways.
 
-* It's necessary to implement both Partial (REGAL) and Full (GC) refresh strategies to optimize display updates on E-Ink screens.
-* 16-level grayscale with Floyd-Steinberg dithering can effectively preserve image quality while minimizing refresh artifacts.
-* A good margin for pen pressure detection is that within the 0.3–1.0N sensitivity range to improves user interaction and accuracy.
-* Targeting a battery consumption of less than 8% per hour is crucial for long-lasting E-Ink device usage.
-* Given E-Ink screen's lower refresh rates, static layout pre-rendering minimizes unnecessary reloading for optimal performance.
+1. It's necessary to implement both Partial (REGAL) and Full (GC) refresh strategies to optimize display updates on E-Ink screens.
+2. 16-level grayscale with Floyd-Steinberg dithering can effectively preserve image quality while minimizing refresh artifacts.
+3. A good margin for pen pressure detection is that within the 0.3–1.0N sensitivity range to improves user interaction and accuracy.
+4. Targeting a battery consumption of less than 8% per hour is crucial for long-lasting E-Ink device usage.
+5. Given E-Ink screen's lower refresh rates, static layout pre-rendering minimizes unnecessary reloading for optimal performance.
 
 ### Hardware Specification
 
