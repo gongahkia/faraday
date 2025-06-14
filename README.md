@@ -35,5 +35,5 @@ $ docker-compose up --build
 The name `Faraday` is in reference to [Faraday](https://cyberpunk.fandom.com/wiki/Faraday), a [fixer](https://cyberpunk.fandom.com/wiki/Fixer) turned main antagonist to [David Martinez](https://cyberpunk.fandom.com/wiki/David_Martinez) and [Maine](https://cyberpunk.fandom.com/wiki/Maine_(Edgerunners))'s crew in the anime [Cyberpunk: Edgerunners](https://cyberpunk.fandom.com/wiki/Cyberpunk:_Edgerunners).
 
 <div align="center">
-    <img src="./asset/logo/faraday.png" width="75%">
+    <img src="./asset/logo/faraday.jpeg" width="75%">
 </div>
