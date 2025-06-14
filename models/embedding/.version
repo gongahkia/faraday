@@ -1,0 +1,6 @@
+{
+  "last_updated": "2025-06-14",
+  "active_model": "all-MiniLM-L6-v2",
+  "model_sha": "a1f5a5b...",
+  "docker_sync": "rsync -avz ./models/embedding/ faraday:/app/models/embedding/"
+}
