@@ -36,7 +36,7 @@ $ npm test -- tests/eink_ui --watchAll
 
 ## Architecture
 
-Note that while `Faraday`'s Hardware Targets are any [Onyx E-Ink devices](), performance was only **physically tested** on the [Onyx Boox Tab Ultra C Pro](https://www.onyxboox.sg/products/onyx-boox-tab-ultra-c-pro). It's technical specifications can be found [here](#hardware-specification).
+Note that while `Faraday`'s Hardware Targets are any [Onyx E-Ink devices](https://onyxboox.com/product), performance was only **physically tested** on the [Onyx Boox Tab Ultra C Pro](https://www.onyxboox.sg/products/onyx-boox-tab-ultra-c-pro). It's technical specifications can be found [here](#hardware-specification).
 
 ### Overview
 
