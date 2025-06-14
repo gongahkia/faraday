@@ -1,5 +1,9 @@
 version: '3.8'
 
+networks:
+  faraday-net:
+    driver: bridge
+
 services:
   backend:
     build:
@@ -13,6 +17,8 @@ services:
     environment:
       - PYTHONUNBUFFERED=1
       - EINK_MODE=true
+    networks:
+      - faraday-net
 
   embeddings:
     build:
@@ -25,6 +31,8 @@ services:
       - "8001:8001"
     environment:
       - PYTHONUNBUFFERED=1
+    networks:
+      - faraday-net
 
   frontend:
     build:
@@ -37,3 +45,5 @@ services:
     environment:
       - NODE_ENV=production
       - REACT_APP_API_URL=http://backend:8000
+    networks:
+      - faraday-net
