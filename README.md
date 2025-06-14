@@ -10,8 +10,9 @@
 * *Backend*: [FastAPI](https://fastapi.tiangolo.com/), [Uvicorn](https://www.uvicorn.org/), [Python](www.python.org)
 * *Package*: [Docker](https://www.docker.com/)
 * *SDK*: [Onyx Boox Android SDK](https://github.com/onyx-intl/OnyxAndroidDemo)
+* *Auth*: [JWT](https://jwt.io/introduction)
 * *Protocol*: [HTTP/2](https://en.wikipedia.org/wiki/HTTP/2), [WebSocket API](https://developer.mozilla.org/en-US/docs/Web/API/WebSockets_API)
-* *Model*: [Mistral-7B-Instruct-v0.2](https://huggingface.co/mistralai/Mistral-7B-Instruct-v0.2) (4-bit GGUF quantized)
+* *Model*: [Mistral-7B-Instruct-v0.2](https://huggingface.co/mistralai/Mistral-7B-Instruct-v0.2) (4-bit GGUF quantized), [all-MiniLM-L6-v2](https://huggingface.co/sentence-transformers/all-MiniLM-L6-v2)
 * *VectorDB*: [FAISS](https://github.com/facebookresearch/faiss) (CPU-optimized)
 * *Testing*: [Jest](https://jestjs.io/), [React Native Testing Library](https://reactnative.dev/docs/testing-overview), [Pytest](https://docs.pytest.org/en/stable/)
 
@@ -35,12 +36,7 @@ $ npm test -- tests/eink_ui --watchAll
 
 ## Architecture
 
-Note that while `Faraday`'s Hardware Targets are any [Onyx E-Ink devices](), performance was only **physically tested** on the [Onyx Boox Tab Ultra C Pro](). It's technical specifications are as below.
-
-* *Device*: [Onyx Boox Tab Ultra C Pro](https://www.onyxboox.sg/products/onyx-boox-tab-ultra-c-pro)
-* *RAM*: 6GB (constrained execution)
-* *CPU*: Qualcomm Snapdragon 8-core (ARMv8)  
-* *Display*: 10.3" Carta 1250 (1404x1872)
+Note that while `Faraday`'s Hardware Targets are any [Onyx E-Ink devices](), performance was only **physically tested** on the [Onyx Boox Tab Ultra C Pro](https://www.onyxboox.sg/products/onyx-boox-tab-ultra-c-pro). It's technical specifications can be found [here](#hardware-specification).
 
 ### Overview
 
@@ -270,30 +266,22 @@ The name `Faraday` is in reference to [Faraday](https://cyberpunk.fandom.com/wik
     <img src="./asset/logo/faraday.jpeg" width="75%">
 </div>
 
-
 ## Other notes
 
 I learnt quite a bit about developing for hardware with less mature *(or unoptimised)* SDKs from working on `Faraday`. Below are some of my key takeaways.
 
-### E-Ink Optimizations
+* It's necessary to implement both Partial (REGAL) and Full (GC) refresh strategies to optimize display updates on E-Ink screens.
+* 16-level grayscale with Floyd-Steinberg dithering can effectively preserve image quality while minimizing refresh artifacts.
+* A good margin for pen pressure detection is that within the 0.3–1.0N sensitivity range to improves user interaction and accuracy.
+* Targeting a battery consumption of less than 8% per hour is crucial for long-lasting E-Ink device usage.
+* Given E-Ink screen's lower refresh rates, static layout pre-rendering minimizes unnecessary reloading for optimal performance.
 
-🔄 **Refresh**: Partial (REGAL) + Full (GC) modes  
-🎨 **Rendering**: 16-level grayscale + Floyd-Steinberg dithering  
-✍️ **Input**: Pen pressure detection (0.3-1.0N range)  
-🔋 **Power**: <8%/hour battery consumption target  
-📐 **UI**: Static layout pre-rendering
+### Hardware Specification
 
-
-### Performance Targets
-⏱️ **Latency**: <2s cold start, <500ms warm  
-💾 **Memory**: <5GB RAM usage (peak)  
-📁 **Storage**: 50MB/doc limit  
-📶 **Network**: Optimized for 3G fallback
-
-### Additional Specs
-🧠 **ML Framework**: PyTorch 2.3 + ONNX Runtime  
-🔢 **Quantization**: GGUF Q4_K_M + AWQ  
-📄 **Doc Processing**: PyPDF4 + LangChain Text Splitter  
-📊 **Embeddings**: all-MiniLM-L6-v2 (384-dim)  
-🗜️ **Compression**: Zstandard (model loading)  
-🔒 **Security**: JWT Authentication
+* *Device*: [Onyx Boox Tab Ultra C Pro](https://www.onyxboox.sg/products/onyx-boox-tab-ultra-c-pro)
+* *RAM*: 6GB (optimal execution), <5GB (peak usage constraint)
+* *CPU*: Qualcomm Snapdragon 8-core (ARMv8)  
+* *Display*: 10.3" Carta 1250 (1404x1872)
+* *Storage*: 50MB/document size limit
+* *Network*: 3G fallback optimization
+* *Latency*: <2s cold starts, <500ms warm responses
