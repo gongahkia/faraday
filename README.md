@@ -37,19 +37,27 @@ $ npm test -- tests/eink_ui --watchAll
 
 ### Overview
 
-![](./asset/reference/architecture.png)
+```mermaid
+
+```
 
 ### Frontend
 
-...
+```mermaid
+
+```
 
 ### Backend
 
-...
+```mermaid
+
+```
 
 ### Model
 
-...
+```mermaid
+
+```
 
 ## Reference
 

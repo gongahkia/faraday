@@ -58,3 +58,7 @@ bower_components/
 *.tar
 *.rar
 *.7z
+models/language/.locks
+models/language/models--*
+models/embedding/.locks
+models/embedding/models--*
