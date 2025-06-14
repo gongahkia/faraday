@@ -8,7 +8,7 @@ Full Stack AI Chat solution for your [Onyx Boox](https://www.boox.com/) devices.
 
 ## Stack
 
-* *Frontend*: [React Native](https://reactnative.dev/), [Generic Onyx Boox SDK](https://github.com/stevezuo/booxsdk)
+* *Frontend*: [React Native](https://reactnative.dev/), [Generic Onyx Boox SDK](https://github.com/stevezuo/booxsdk), [JavaScript](https://developer.mozilla.org/en-US/docs/Web/JavaScript)
 * *Backend*: [FastAPI](https://fastapi.tiangolo.com/), [Uvicorn](https://www.uvicorn.org/), [Python](www.python.org)
 * *Package*: [Docker](https://www.docker.com/)
 * *SDK*: [Onyx Boox Android SDK](https://github.com/onyx-intl/OnyxAndroidDemo)
