@@ -2,13 +2,13 @@ FROM node:18-alpine
 
 WORKDIR /app
 
-COPY frontend/package.json frontend/package-lock.json ./
+COPY frontend/package*.json ./
+
+# Install dependencies
 RUN npm install --production
 
-COPY frontend/ ./frontend/
-
-RUN npm run build --prefix frontend
+COPY frontend/ ./
 
 EXPOSE 19000
 
-CMD ["npm", "start", "--prefix", "frontend"]
+CMD ["npm", "start"]
