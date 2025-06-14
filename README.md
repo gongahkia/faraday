@@ -39,3 +39,7 @@ The name `Faraday` is in reference to [Faraday](https://cyberpunk.fandom.com/wik
 <div align="center">
     <img src="./asset/logo/faraday.jpeg" width="75%">
 </div>
+
+## Other notes
+
+... Add specific notes I had while creating this project specifically relating to developing for unoptimised hardware.
