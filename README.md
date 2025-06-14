@@ -24,9 +24,14 @@ The below instructions are for locally hosting `Faraday`.
 ```console
 $ git clone https://github.com/gongahkia/faraday && cd faraday
 $ docker-compose up --build
+$ ...
 ```
 
-2. ...
+2. Execute the below to run [Software](./tests/document_processing/) and [Hardware](./tests/eink_ui/) tests.
+
+```console
+$ npm test -- tests/eink_ui --watchAll
+```
 
 ## Architecture
 
