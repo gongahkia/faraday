@@ -30,6 +30,7 @@ $ ...
 2. Execute the below to run [Software](./tests/document_processing/) and [Hardware](./tests/eink_ui/) tests.
 
 ```console
+$ npm test -- tests/document_processing --watchAll
 $ npm test -- tests/eink_ui --watchAll
 ```
 
