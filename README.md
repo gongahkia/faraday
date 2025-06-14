@@ -12,8 +12,8 @@
 * *SDK*: [Onyx Boox Android SDK](https://github.com/onyx-intl/OnyxAndroidDemo)
 * *Auth*: [JWT](https://jwt.io/introduction)
 * *Protocol*: [HTTP/2](https://en.wikipedia.org/wiki/HTTP/2), [WebSocket API](https://developer.mozilla.org/en-US/docs/Web/API/WebSockets_API)
-* *Model*: [Mistral-7B-Instruct-v0.2](https://huggingface.co/mistralai/Mistral-7B-Instruct-v0.2) (4-bit GGUF quantized), [all-MiniLM-L6-v2](https://huggingface.co/sentence-transformers/all-MiniLM-L6-v2)
-* *VectorDB*: [FAISS](https://github.com/facebookresearch/faiss) (CPU-optimized)
+* *Model*: [Mistral-7B-Instruct-v0.2](https://huggingface.co/mistralai/Mistral-7B-Instruct-v0.2), [all-MiniLM-L6-v2](https://huggingface.co/sentence-transformers/all-MiniLM-L6-v2)
+* *VectorDB*: [FAISS](https://github.com/facebookresearch/faiss)
 * *Testing*: [Jest](https://jestjs.io/), [React Native Testing Library](https://reactnative.dev/docs/testing-overview), [Pytest](https://docs.pytest.org/en/stable/)
 
 ## Usage
