@@ -6,7 +6,7 @@
 
 ## Stack
 
-* *Frontend*: 
+* *Frontend*: [React Native](), 
 * *Backend*: 
 * *Package*: 
 * *SDK*: 
