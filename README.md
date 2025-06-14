@@ -6,9 +6,9 @@
 
 ## Stack
 
-* *Frontend*: [React Native](), 
+* *Frontend*: [React Native](https://reactnative.dev/), 
 * *Backend*: 
-* *Package*: 
+* *Package*: [Docker](https://www.docker.com/)
 * *SDK*: 
 * *Protocol*: 
 * *Model*: 
