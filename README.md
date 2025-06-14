@@ -13,6 +13,7 @@
 * *Protocol*: 
 * *Model*: 
 * *VectorDB*: 
+* *API*: [FastAPI](https://fastapi.tiangolo.com/)
 
 ## Usage
 
