@@ -11,7 +11,7 @@
 * *Package*: [Docker](https://www.docker.com/)
 * *SDK*: [Onyx Boox Android SDK](https://github.com/onyx-intl/OnyxAndroidDemo)
 * *Protocol*: [HTTP/2](https://en.wikipedia.org/wiki/HTTP/2), [WebSocket API](https://developer.mozilla.org/en-US/docs/Web/API/WebSockets_API)
-* *Model*: [Mistral-7B-Instruct-v0.2]() (4-bit GGUF quantized)
+* *Model*: [Mistral-7B-Instruct-v0.2](https://huggingface.co/mistralai/Mistral-7B-Instruct-v0.2) (4-bit GGUF quantized)
 * *VectorDB*: [FAISS](https://github.com/facebookresearch/faiss) (CPU-optimized)
 * *Testing*: [Jest](https://jestjs.io/), [React Native Testing Library](https://reactnative.dev/docs/testing-overview), [Pytest](https://docs.pytest.org/en/stable/)
 
