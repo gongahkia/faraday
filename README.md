@@ -23,8 +23,7 @@ The below instructions are for locally hosting `Faraday`.
 
 ```console
 $ git clone https://github.com/gongahkia/faraday && cd faraday
-$ docker-compose up --build
-$ ...
+$ docker-compose -f docker/compose.prod.yml up --build
 ```
 
 2. Execute the below to run [Software](./tests/document_processing/) and [Hardware](./tests/eink_ui/) tests.

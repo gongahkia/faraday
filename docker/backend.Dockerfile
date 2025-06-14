@@ -4,14 +4,17 @@ WORKDIR /app
 
 RUN apt-get update && apt-get install -y \
     build-essential \
+    libgl1-mesa-glx \
+    poppler-utils \
     && rm -rf /var/lib/apt/lists/*
 
 COPY backend/requirements.txt .
 RUN pip install --no-cache-dir -r requirements.txt
 
-COPY backend/document_processing/ ./backend/document_processing/
-COPY models/embedding/ ./models/embedding/
+COPY backend/ ./backend/
+COPY models/ ./models/
+COPY helper/ ./helper/
 
-EXPOSE 8001
+EXPOSE 8000
 
-CMD ["uvicorn", "backend.api.documents:app", "--host", "0.0.0.0", "--port", "8001"]
+CMD ["uvicorn", "backend.api.chat:app", "--host", "0.0.0.0", "--port", "8000"]

@@ -1,0 +1,39 @@
+version: '3.8'
+
+services:
+  backend:
+    build:
+      context: ..
+      dockerfile: docker/backend.Dockerfile
+    volumes:
+      - ../backend:/app/backend
+      - ../models:/app/models
+    ports:
+      - "8000:8000"
+    environment:
+      - PYTHONUNBUFFERED=1
+      - EINK_MODE=true
+
+  embeddings:
+    build:
+      context: ..
+      dockerfile: docker/embeddings.Dockerfile
+    volumes:
+      - ../backend/document_processing:/app/backend/document_processing
+      - ../models/embedding:/app/models/embedding
+    ports:
+      - "8001:8001"
+    environment:
+      - PYTHONUNBUFFERED=1
+
+  frontend:
+    build:
+      context: ..
+      dockerfile: docker/frontend.Dockerfile
+    ports:
+      - "19000:19000"
+    volumes:
+      - ../frontend:/app/frontend
+    environment:
+      - NODE_ENV=production
+      - REACT_APP_API_URL=http://backend:8000
